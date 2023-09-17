@@ -53,7 +53,38 @@ class _MainScreenState extends State<MainScreen> {
             ],
           ),
         ),
+        // add bottom navigation bar here and add home ,hospital ,sms chat, profile icons
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: Colors.white,
+          selectedItemColor: Colors.blueAccent,
+          unselectedItemColor: Colors.grey,
+          selectedFontSize: 14,
+          unselectedFontSize: 14,
+          onTap: (value) {
+            // Respond to item press.
+          },
+          items: const [
+            BottomNavigationBarItem(
+              label: 'Home',
+              icon: Icon(Icons.home),
+            ),
+            BottomNavigationBarItem(
+              label: 'Hospital',
+              icon: Icon(Icons.local_hospital),
+            ),
+            BottomNavigationBarItem(
+              label: 'SMS Chat',
+              icon: Icon(Icons.sms),
+            ),
+            BottomNavigationBarItem(
+              label: 'Profile',
+              icon: Icon(Icons.person),
+            ),
+          ],
+        ),
       ),
+
     );
   }
 }
