@@ -70,20 +70,24 @@ class _RegisterScreenState extends State<RegisterScreen> {
           Padding(
             padding: const EdgeInsets.only(top: 500),
             child: Container(
-              height: 500,
+              height: double.infinity,
               width: double.infinity,
               decoration: BoxDecoration(
                 color: Colors.white,
               ),
               child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 180),
-                    child: Text(
-                      'Or Continue with',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 20,
+                  Flexible(
+                    fit: FlexFit.loose,
+                    flex: 1,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 150),
+                      child: Text(
+                        'Or Continue with',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                        ),
                       ),
                     ),
                   ),
@@ -94,39 +98,47 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         // add facebook button here
-                        Padding(
-                          padding: const EdgeInsets.only(right: 20),
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            child: Icon(
-                              Icons.facebook,
-                              color: Colors.white,
-                              size: 30,
-                            ),
-                            style: ElevatedButton.styleFrom(
-                              primary: Colors.blue,
-                              minimumSize: Size(60, 60),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30),
+                        Flexible(
+                          fit: FlexFit.loose,
+                          flex: 1,
+                          child: Padding(
+                            padding: const EdgeInsets.only(right: 20),
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              child: Icon(
+                                Icons.facebook,
+                                color: Colors.white,
+                                size: 30,
+                              ),
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.blue,
+                                minimumSize: Size(60, 60),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
                               ),
                             ),
                           ),
                         ),
                         // add google button here
-                        Padding(
-                          padding: const EdgeInsets.only(left: 20),
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            child: Icon(
-                              Icons.g_mobiledata,
-                              color: Colors.white,
-                              size: 30,
-                            ),
-                            style: ElevatedButton.styleFrom(
-                              primary: Colors.red,
-                              minimumSize: Size(60, 60),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30),
+                        Flexible(
+                          fit: FlexFit.loose,
+                          flex: 1,
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 20),
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              child: Icon(
+                                Icons.g_mobiledata,
+                                color: Colors.white,
+                                size: 30,
+                              ),
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.red,
+                                minimumSize: Size(60, 60),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
                               ),
                             ),
                           ),
@@ -135,33 +147,37 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                   ),
                   // add login text here below the buttons
-                  Padding(
-                    padding: const EdgeInsets.only(top: 50),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Already have an account?',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 15,
-                          ),
-                        ),
-                        TextButton(
-                          onPressed: () {
-                            // using GetX navigation goto LoginScreen
-                            Get.to(() => Login());
-                          },
-                          child: Text(
-                            'Sign In',
+                  Flexible(
+                    fit: FlexFit.loose,
+                    flex: 1,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 30),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Already have an account?',
                             style: TextStyle(
-                              color: Colors.blueAccent,
+                              color: Colors.black,
                               fontSize: 15,
-                              fontWeight: FontWeight.bold,
                             ),
                           ),
-                        ),
-                      ],
+                          TextButton(
+                            onPressed: () {
+                              // using GetX navigation goto LoginScreen
+                              Get.to(() => Login());
+                            },
+                            child: Text(
+                              'Sign In',
+                              style: TextStyle(
+                                color: Colors.blueAccent,
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -170,7 +186,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
           ),
           Expanded(
             child: Container(
-              height: 450,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: Colors.white,
@@ -187,6 +202,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               child: Form(
                 key: _formkey,
                 child: Column(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     // add email textfield here
                     TextFields(
@@ -206,7 +222,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsets.only(top: 10, left: 20, right: 20),
+                          const EdgeInsets.only(top: 5, left: 20, right: 20),
                       child: Row(
                         children: [
                           Checkbox(
@@ -227,7 +243,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     // check box for do not want to recive the news
                     Padding(
                       padding:
-                          const EdgeInsets.only(top: 10, left: 20, right: 20),
+                          const EdgeInsets.only(top: 0, left: 20, right: 20),
                       child: Row(
                         children: [
                           Checkbox(
@@ -247,7 +263,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
 
                     Padding(
-                      padding: const EdgeInsets.only(top: 30),
+                      padding: const EdgeInsets.only(top: 15, bottom: 15),
                       child: ElevatedButton(
                         onPressed: () {
                           if (_formkey.currentState!.validate()) {
