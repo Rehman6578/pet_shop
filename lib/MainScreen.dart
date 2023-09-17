@@ -66,20 +66,20 @@ class _MainScreenState extends State<MainScreen> {
           },
           items: const [
             BottomNavigationBarItem(
-              label: 'Home',
-              icon: Icon(Icons.home),
+              label: 'Search',
+              icon: Icon(Icons.search),
             ),
             BottomNavigationBarItem(
-              label: 'Hospital',
-              icon: Icon(Icons.local_hospital),
+              label: 'Appointments',
+              icon: Icon(Icons.watch_later_outlined),
             ),
             BottomNavigationBarItem(
-              label: 'SMS Chat',
-              icon: Icon(Icons.sms),
+              label: 'Explore',
+              icon: Icon(Icons.explore_outlined),
             ),
             BottomNavigationBarItem(
               label: 'Profile',
-              icon: Icon(Icons.person),
+              icon: Icon(Icons.person_outline_outlined),
             ),
           ],
         ),
